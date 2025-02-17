@@ -1,4 +1,4 @@
-# 🌍 Global ESG Analysis System
+# 🌍 ESG Analysis
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,7 +6,7 @@
 
 ## 🎯 Overview
 
-The Global ESG Analysis System provides institutional-grade Environmental, Social, and Governance analytics powered by Refinitiv data. Get detailed ESG insights for companies across 150+ global exchanges with real-time monitoring and comprehensive reporting.
+The ESG Analysis system provides institutional-grade Environmental, Social, and Governance analytics powered by Refinitiv data. Get detailed ESG insights for companies across 150+ global exchanges with real-time monitoring and comprehensive reporting.
 
 ## ⚡ Quick Start
 
