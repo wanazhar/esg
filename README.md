@@ -12,7 +12,7 @@ The Global ESG Analysis System provides institutional-grade Environmental, Socia
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/global-esg.git
+git clone https://github.com/wanazhar/esg.git
 
 # Install dependencies
 pip install -r requirements.txt
@@ -126,11 +126,11 @@ python esg.py start
 ┌─────────────────────┬────────┐
 │ ESG Category        │ Score  │
 ├─────────────────────┼────────┤
-│ Overall Score      │ 85.2   │
-│ Environmental      │ 88.4   │
-│   • Resource Use   │ 90.1   │
-│   • Emissions      │ 87.2   │
-│   • Innovation     │ 88.0   │
+│ Overall Score       │ 85.2   │
+│ Environmental       │ 88.4   │
+│   • Resource Use    │ 90.1   │
+│   • Emissions       │ 87.2   │
+│   • Innovation      │ 88.0   │
 └─────────────────────┴────────┘
 ```
 
@@ -166,9 +166,9 @@ python esg.py start
 
 ## 📞 Support
 
-- 📧 Email: support@example.com
-- 💬 Discord: [Join our server](https://discord.gg/example)
-- 📚 Documentation: [Read the docs](https://docs.example.com)
+- 📧 Email: TBA
+- 💬 Discord: TBA
+- 📚 Documentation: TBA
 
 ## 📜 License
 
@@ -176,4 +176,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by Your Organization
+Made with ❤️ by wanazhar
