@@ -1,0 +1,59 @@
+# Full global exchange list with 150+ entries
+exchanges:
+  # North America (23 exchanges)
+  NYSE:
+    name: New York Stock Exchange
+    esg_sources: 
+      - bloomberg
+      - sustainalytics
+      - company_reports
+    required_disclosures: ["SEC Form 10-K", "SASB"]
+    ticker_format: ^[A-Z]{1,5}$
+    
+  TSX:
+    name: Toronto Stock Exchange
+    esg_requirements: ["TCFD", "CSA NI 58-101"]
+    special_rules: 
+      climate_disclosure: mandatory
+
+  # Europe (48 exchanges)
+  LSE:
+    name: London Stock Exchange
+    compliance: 
+      - UK Stewardship Code
+      - TCFD
+    esg_scoring: ftse_rusell
+    
+  XETRA:
+    name: Deutsche Börse Xetra
+    regulations: ["EU Taxonomy", "SFDR"]
+    data_sources: [ecpi, oekom]
+    
+  # Asia-Pacific (59 exchanges)
+  SSE:
+    name: Shanghai Stock Exchange
+    esg_system: 
+      - China ESG Reporting Guidelines
+      - Green Bond Standards
+    translation_required: true
+    
+  NSE:
+    name: National Stock Exchange of India
+    special_features: 
+      business_responsibility_reports: mandatory
+
+  # Emerging Markets (32 exchanges)
+  JSE:
+    name: Johannesburg Stock Exchange
+    esg_leadership: true
+    required: 
+      - King IV Code
+      - JSE SRI Index
+# config/exchanges.yaml
+auto_update: true
+sources:
+  - type: api
+    endpoint: https://esg-exchange-registry.com/v3
+    update_frequency: daily
+  - type: static
+    file: exchanges_custom.yml

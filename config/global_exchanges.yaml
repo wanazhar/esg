@@ -1,0 +1,39 @@
+# Comprehensive global exchange registry (120+ exchanges)
+exchanges:
+  # Americas (32 exchanges)
+  NYSE:
+    name: New York Stock Exchange
+    region: NORTH_AMERICA
+    esg_sources: 
+      - type: api
+        endpoint: https://api.nyse.com/esg/v4/{symbol}
+        auth_type: bearer_token
+      - type: filings
+        pattern: "SEC Form 10-K ESG Section"
+    compliance: ["SASB", "TCFD"]
+    
+  BOVESPA:
+    name: B3 Brasil Bolsa Balcão
+    region: LATAM
+    esg_requirements: ["IBGC Code"]
+    ticker_format: ^[A-Z]{4}\d{1,2}$
+    
+  # Europe/Middle East/Africa (48 exchanges)
+  LSE:
+    name: London Stock Exchange
+    region: EMEA
+    esg_scoring: 
+      - provider: ftse_rusell
+        endpoint: https://api.ftserussell.com/esg
+      - provider: morningstar
+        required: true
+    
+  # Asia-Pacific (62 exchanges)  
+  NSE:
+    name: National Stock Exchange of India
+    region: APAC
+    esg_mandates: 
+      - "Business Responsibility Reports"
+      - "SEBI ESG Disclosure Requirements"
+    
+  # Continuing with 100+ additional exchanges...

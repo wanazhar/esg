@@ -1,0 +1,56 @@
+# config/global_standards.yaml
+esg_frameworks:
+  - name: GRI
+    version: "GRI Standards 2023"
+    applicable_regions: [GLOBAL]
+    required_disclosures: [301-1, 302-4, 305-1]
+    
+  - name: SASB
+    industry_map: 
+      technology: "Software & IT Services Standard"
+      energy: "Oil & Gas Exploration Standard"
+      
+  - name: TCFD
+    required_fields: 
+      - governance
+      - strategy
+      - risk_management
+      - metrics_targets
+
+compliance:
+  EU:
+    - SFDR
+    - EU Taxonomy
+  APAC: 
+    - HKEX ESG Guide
+    - JPX Code
+# Enhanced global_standards.yaml
+regulatory_checks:
+  - region: EU
+    rules:
+      - name: SFDR
+        required_fields: [principal_adverse_impacts, sustainability_risk]
+      - name: EU Taxonomy
+        alignment_threshold: 95%
+        
+  - region: APAC
+    rules:
+      - name: HKEX ESG Guide
+        disclosure_requirements: [B1, B2, B3, B4]
+      - name: JPX Code
+        governance_metrics: [board_diversity, exec_compensation]
+# config/global_standards.yaml
+esg_providers:
+  refinitiv:
+    version: "2023.2"
+    scoring_model:
+      weights:
+        environmental: 35%
+        social: 35%
+        governance: 30%
+      subcategory_mapping:
+        resource_use: TR.ResourceUseScore
+        emissions: TR.EmissionsScore
+        innovation: TR.InnovationScore
+        # ... other mappings
+    required_fields: [ESGScore, EnvironmentalPillar, SocialPillar]
